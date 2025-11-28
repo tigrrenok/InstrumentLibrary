@@ -6,18 +6,16 @@
 
 <ul>
     {% for p in instruments %}
-    {% if p.is_published %}
     <li>
         <h2> {{ p.title }}</h2>
         {% autoescape off %}
         <p> {{ p.content | linebreaks | truncatewords:50}}</p>
         {% endautoescape %}
-        <p> <a href= "{% url 'instrument' p.id %}"> Подробней </a></p>
+        <p> <a href= "{{ p.get_absolute_url }}"> Подробней </a></p>
         {% if not forloop.last %}
         <hr>
         {% endif %}
     </li>
-    {% endif %}
     {% endfor %}
 </ul>
 

@@ -10,7 +10,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('login/', views.login, name='login'),
     path('about/', views.about, name='about'),
-    path('instrument/<int:instrument_id>/', views.show_instrument, name='instrument'),
+    path('instrument/<slug:instrument_slug>/', views.show_instrument, name='instrument'),
     path('category/<int:category_id>/', views.show_category, name='category'),
 ]
 

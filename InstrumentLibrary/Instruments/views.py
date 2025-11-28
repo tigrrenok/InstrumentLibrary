@@ -1,7 +1,10 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.template.defaultfilters import title
 from django.urls import reverse
+
+import Instruments
+from .models import Instrument
 
 menu = [{'title': "О сайте", 'url_name': 'about'},
         {'title': "Добавить статью", 'url_name': 'add_page'},
@@ -23,9 +26,10 @@ cats_db = [
 
 # Create your views here.
 def index(request):
+    instruments = Instrument.published_objects.all()
     data = {'title': "Главная страница",
             'menu': menu,
-            'instruments': data_db,
+            'instruments': instruments,
             'cat_selected': 0}
     return render (request, 'Instruments/index.html', context=data)
 
@@ -35,10 +39,16 @@ def about(request):
     return render(request, 'Instruments/about.html', context=data)
 
 
-def show_instrument(request, instrument_id):
-    data = {'title': f"О приборе c id: {instrument_id}",
-            'menu': menu}
-    return HttpResponse(f"О приборе c id: {instrument_id}")
+def show_instrument(request, instrument_slug):
+    instrument = get_object_or_404(Instrument, slug=instrument_slug)
+    data = {
+        'title': instrument.title,
+        'menu': menu,
+        'instrument': instrument,
+        'cat_selected': 1
+    }
+
+    return render(request, 'Instruments/instrument.html', context=data)
 
 
 def page_not_found(request, exception):

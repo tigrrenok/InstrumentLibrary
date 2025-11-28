@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> {{ instrument.title }} </h1>
+
+{% if instrument.photo %}
+<p> <img class="img-article-left" src="{{instrument.photo.url}}"> </p>
+{% endif %}
+
+{{ instrument.content | linebreaks}}
+
+{% endblock %}
