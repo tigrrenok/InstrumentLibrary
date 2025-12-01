@@ -1,13 +1,14 @@
 from django import template
-import Instruments.views as views
+
+from Instruments.models import InstrumentCategory, TagInstrument
 
 register = template.Library()
 
-@register.simple_tag()
-def get_categories():
-    return views.cats_db
-
 @register.inclusion_tag('Instruments/list_categories.html')
 def show_categories(cat_selected=0):
-    cats = views.cats_db
+    cats = InstrumentCategory.objects.all()
     return {'cats': cats, 'cat_selected': cat_selected}
+
+@register.inclusion_tag('Instruments/list_tags.html')
+def show_all_tags():
+    return {'tags': TagInstrument.objects.all()}
