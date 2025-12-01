@@ -1,4 +1,5 @@
 from django.db import models
+from slugify import slugify
 from django.urls import reverse
 
 
@@ -9,19 +10,21 @@ class PublishedManager(models.Manager):
 
 class Instrument(models.Model):
     class Status(models.IntegerChoices):
-        DRAFT = 0, 'Не актуально'
-        PUBLISHED = 1, 'Опубликовано'
-    title = models.CharField(max_length=100)
+        DRAFT = 0, 'снято с производства'
+        PUBLISHED = 1, 'доступно'
+    title = models.CharField(max_length=100, verbose_name="название")
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
-    content = models.TextField(blank=True)
+    content = models.TextField(blank=True, verbose_name="содержание")
     time_created = models.DateTimeField(auto_now_add=True)
     time_updated = models.DateTimeField(auto_now=True)
-    is_published = models.BooleanField(choices=Status, default=Status.PUBLISHED)
-    cat = models.ForeignKey('InstrumentCategory', on_delete=models.PROTECT, related_name='instruments')
-    tags = models.ManyToManyField('TagInstrument', blank=True, related_name='instruments')
+    is_published = models.IntegerField(choices=Status, default=0, verbose_name="актуальность")
+    cat = models.ForeignKey('InstrumentCategory', on_delete=models.PROTECT, related_name='instruments', verbose_name="категории")
+    tags = models.ManyToManyField('TagInstrument', blank=True, related_name='instruments', verbose_name="тэги")
+    specifications = models.OneToOneField('InstrumentSpecification', on_delete=models.SET_NULL,
+                                          null=True, blank =True, related_name='instrument', verbose_name="спецификация")
 
-    published_objects = PublishedManager()
     objects = models.Manager()
+    published_objects = PublishedManager()
 
     def __str__(self):
         return self.title
@@ -31,13 +34,25 @@ class Instrument(models.Model):
         indexes = [
             models.Index(fields=['-time_created']),
         ]
+        verbose_name = 'лабораторное оборудование'
+        verbose_name_plural = verbose_name
+
+
     def get_absolute_url(self):
         return reverse('instrument', kwargs={'instrument_slug': self.slug})
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
 
 class InstrumentCategory(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name="название категории")
     slug = models.SlugField(max_length=255, unique=True, db_index=True)
+
+    class Meta:
+        verbose_name = "Категории оборудования"
+        verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.name
@@ -47,12 +62,21 @@ class InstrumentCategory(models.Model):
 
 
 class TagInstrument(models.Model):
-    name = models.CharField(max_length=100, db_index=True)
-    slug = models.SlugField(max_length=255, unique=True, db_index=True)
+    name = models.CharField(max_length=100, db_index=True, verbose_name="название тэга")
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="слаг")
+
+    class Meta:
+        verbose_name = "Тэги для оборудования"
+        verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
         return reverse('tag', kwargs={'tag_slug': self.slug})
+
+class InstrumentSpecification(models.Model):
+    accuracy = models.CharField(blank=True, null=True, verbose_name="Точность")
+    resolution = models.CharField(blank=True, null=True, verbose_name="Разрешение")
+    method = models.CharField(max_length=255, blank=True, null=True)
 

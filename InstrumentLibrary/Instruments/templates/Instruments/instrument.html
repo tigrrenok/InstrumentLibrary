@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 
 <h1> {{ instrument.title }} </h1>
@@ -9,5 +10,16 @@
 {% endif %}
 
 {{ instrument.content | linebreaks}}
+
+{% with instrument.tags.all as tags %}
+{% if tags %}
+<ul class="tags-list">
+    <li>Тэги:</li>
+    {% for t in tags %}
+    <li> <a href="{{ t.get_absolute_url }}"> {{t.name}} </a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
 
 {% endblock %}

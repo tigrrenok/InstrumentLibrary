@@ -15,7 +15,7 @@ menu = [{'title': "О сайте", 'url_name': 'about'},
 
 # Create your views here.
 def index(request):
-    instruments = Instrument.published_objects.all()
+    instruments = Instrument.published_objects.all().select_related('cat')
     data = {'title': "Главная страница",
             'menu': menu,
             'instruments': instruments,
@@ -58,7 +58,7 @@ def login(request):
 
 def show_category(request, category_slug):
     category = get_object_or_404(InstrumentCategory, slug=category_slug)
-    instruments = Instrument.published_objects.filter(cat_id=category.pk)
+    instruments = Instrument.published_objects.filter(cat_id=category.pk).select_related('cat')
 
     data = {'title': f"Приборы в категории {category.name}",
             'menu': menu,
@@ -69,7 +69,7 @@ def show_category(request, category_slug):
 
 def show_tag(request, tag_slug):
     tag = get_object_or_404(TagInstrument, slug=tag_slug)
-    instruments = tag.instruments.filter(is_published=Instrument.Status.PUBLISHED)
+    instruments = tag.instruments.filter(is_published=Instrument.Status.PUBLISHED).select_related('cat')
 
     data = {'title': f"Приборы в категории {tag.name}",
             'menu': menu,
