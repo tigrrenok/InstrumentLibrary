@@ -1,9 +1,11 @@
 from django import template
 from django.db.models import Count
 
+from Instruments.mixins import menu
 from Instruments.models import InstrumentCategory, TagInstrument
 
 register = template.Library()
+
 
 @register.inclusion_tag('Instruments/list_categories.html')
 def show_categories(cat_selected=0):

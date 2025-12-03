@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect, render, get_object_or_404
@@ -26,20 +28,17 @@ class Home(DataMixin, ListView):
     def get_queryset(self):
         return Instrument.published_objects.all().select_related('cat')
 
-
+@login_required
 def about(request):
     contact_list = Instrument.published_objects.all().select_related('cat')
     paginator = Paginator(contact_list, 3)
 
     page_number = request.GET.get('page', 1)
     page_obj = paginator.get_page(page_number)
-    print(type(page_obj).__dict__)
-
     return render(request, 'Instruments/about.html',
                   context={'title': "О сайте", 'page_obj': page_obj})
 
-# class AboutPage(DataMixin, TemplateView):
-#     template_name = 'Instruments/about.html'
+
 
 class InstrumentView(DataMixin, DetailView):
     template_name = 'Instruments/instrument.html'
@@ -59,14 +58,15 @@ def page_not_found(request, exception):
     return HttpResponseNotFound("Страница не найдена")
 
 
-class AddPage(DataMixin, CreateView):
+
+class AddPage(LoginRequiredMixin, DataMixin, CreateView):
     model = Instrument
     fields = '__all__'
     template_name = 'Instruments/addpage.html'
     title_page = 'Добавление прибора'
 
 
-class UpdatePage(DataMixin, UpdateView):
+class UpdatePage(LoginRequiredMixin, DataMixin, UpdateView):
     model = Instrument
     fields = '__all__'
     template_name = 'Instruments/addpage.html'
