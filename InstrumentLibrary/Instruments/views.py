@@ -1,4 +1,4 @@
-
+from django.core.paginator import Paginator
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect, render, get_object_or_404
 
@@ -28,20 +28,15 @@ class Home(DataMixin, ListView):
 
 
 def about(request):
-    if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            fp = UploadedFiles(file=form.cleaned_data['file'])
-            fp.save()
-    else:
-        form = UploadFileForm()
+    contact_list = Instrument.published_objects.all().select_related('cat')
+    paginator = Paginator(contact_list, 3)
 
-    data = {
-        'title': "О компании",
-            'menu': menu,
-            'form': form,
-            }
-    return render(request, 'Instruments/about.html', context=data)
+    page_number = request.GET.get('page', 1)
+    page_obj = paginator.get_page(page_number)
+    print(type(page_obj).__dict__)
+
+    return render(request, 'Instruments/about.html',
+                  context={'title': "О сайте", 'page_obj': page_obj})
 
 # class AboutPage(DataMixin, TemplateView):
 #     template_name = 'Instruments/about.html'
