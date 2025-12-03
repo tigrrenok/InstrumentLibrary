@@ -14,6 +14,9 @@ class Instrument(models.Model):
         PUBLISHED = 1, 'доступно'
     title = models.CharField(max_length=100, verbose_name="название")
     slug = models.SlugField(max_length=100, unique=True, db_index=True)
+    image = models.ImageField(upload_to=f'images/', null=True, blank=True, default=None,
+                              verbose_name="image")
+
     content = models.TextField(blank=True, verbose_name="содержание")
     time_created = models.DateTimeField(auto_now_add=True)
     time_updated = models.DateTimeField(auto_now=True)
@@ -42,7 +45,8 @@ class Instrument(models.Model):
         return reverse('instrument', kwargs={'instrument_slug': self.slug})
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        if not self.slug:
+            self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
 
@@ -80,3 +84,5 @@ class InstrumentSpecification(models.Model):
     resolution = models.CharField(blank=True, null=True, verbose_name="Разрешение")
     method = models.CharField(max_length=255, blank=True, null=True)
 
+class UploadedFiles(models.Model):
+    file = models.FileField(upload_to='uploads_instrument')

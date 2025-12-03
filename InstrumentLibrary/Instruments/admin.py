@@ -1,4 +1,5 @@
 from django.contrib import admin, messages
+from django.utils.safestring import mark_safe
 
 from .models import Instrument, InstrumentCategory
 # Register your models here.
@@ -20,7 +21,8 @@ class SpecificationFilter(admin.SimpleListFilter):
 
 @admin.register(Instrument)
 class InstrumentAdmin(admin.ModelAdmin):
-    list_display = ('title', 'brief_info', 'is_published', 'cat')
+    list_display = ('title', "show_image", 'brief_info', 'is_published', 'cat')
+    fields = ('title', 'is_published', 'cat', 'show_image', 'tags', 'specifications')
     list_display_links = ('title', )
     ordering = ('title', )
     search_fields = ('title', 'content', 'cat__name')
@@ -28,11 +30,19 @@ class InstrumentAdmin(admin.ModelAdmin):
     list_per_page = 20
     actions = ['set_obsolete', 'set_actual']
     list_filter = (SpecificationFilter, 'is_published', 'cat__name')
-    readonly_fields = ('slug', )
+    readonly_fields = ('slug', "show_image")
+    filter_horizontal = ('tags', )
+    save_on_top = True
 
     @admin.display(description='Краткое описание')
     def brief_info(self, instrument):
         return instrument.content[:45]
+
+    @admin.display(description='Изображение')
+    def show_image(self, instrument):
+        if instrument.image:
+            return mark_safe(f"<img src='{instrument.image.url}' width=50>")
+        return 'без картинки'
 
     @admin.action(description="Пометить снятыми с производства")
     def set_obsolete(self, request, queryset):

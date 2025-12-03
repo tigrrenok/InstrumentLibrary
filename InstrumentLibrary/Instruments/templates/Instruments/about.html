@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<p> Своя информация </p>
+<h1>{{ title }}</h1>
+
+<form action="", method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="submit-button">
+        Отправить
+    </button>
+</form>
 
 {% endblock %}

@@ -5,8 +5,8 @@
 
 <h1> {{ instrument.title }} </h1>
 
-{% if instrument.photo %}
-<p> <img class="img-article-left" src="{{instrument.photo.url}}"> </p>
+{% if instrument.image %}
+<p> <img class="img-article-left" src="{{instrument.image.url}}"> </p>
 {% endif %}
 
 {{ instrument.content | linebreaks}}
@@ -21,5 +21,9 @@
 </ul>
 {% endif %}
 {% endwith %}
+
+<form action="/edit/{{instrument.pk}}" target="_blank">
+   <button>Изменить</button>
+  </form>
 
 {% endblock %}
