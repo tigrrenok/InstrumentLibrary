@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect, render, get_object_or_404
@@ -59,19 +59,21 @@ def page_not_found(request, exception):
 
 
 
-class AddPage(LoginRequiredMixin, DataMixin, CreateView):
+class AddPage(PermissionRequiredMixin, LoginRequiredMixin, DataMixin, CreateView):
     model = Instrument
     fields = '__all__'
     template_name = 'Instruments/addpage.html'
     title_page = 'Добавление прибора'
+    permission_required = 'Instrument.add_instrument'
 
 
-class UpdatePage(LoginRequiredMixin, DataMixin, UpdateView):
+class UpdatePage(PermissionRequiredMixin, LoginRequiredMixin, DataMixin, UpdateView):
     model = Instrument
     fields = '__all__'
     template_name = 'Instruments/addpage.html'
     success_url = reverse_lazy('home')
     title_page = 'Редактирвание прибора'
+    permission_required = 'Instrument.change_instrument'
 
 
 def contact(request):
