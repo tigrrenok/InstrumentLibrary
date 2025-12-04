@@ -27,7 +27,8 @@
         {% endfor %}
 
         <button type="submit" class="submit-button">
-            Отправить
+            Войти
         </button>
+    <p ><a href="{% url 'users:password_reset' %}">Забыли пароль?</a></p>
     </form>
 {% endblock %}
