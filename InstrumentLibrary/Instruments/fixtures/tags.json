@@ -1,0 +1,26 @@
+[
+{
+  "model": "Instruments.taginstrument",
+  "pk": 1,
+  "fields": {
+    "name": "потенциометрическое титрование",
+    "slug": "potentiometric-titration"
+  }
+},
+{
+  "model": "Instruments.taginstrument",
+  "pk": 2,
+  "fields": {
+    "name": "волюмометрическое титрование",
+    "slug": "volumetric-titration"
+  }
+},
+{
+  "model": "Instruments.taginstrument",
+  "pk": 3,
+  "fields": {
+    "name": "кулонометрическое титрование",
+    "slug": "coulometric-titration"
+  }
+}
+]

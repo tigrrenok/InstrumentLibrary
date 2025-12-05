@@ -1,0 +1,11 @@
+[
+{
+  "model": "Instruments.instrumentspecification",
+  "pk": 1,
+  "fields": {
+    "accuracy": "3%",
+    "resolution": "0.01",
+    "method": "Потециометрическое титрование"
+  }
+}
+]
