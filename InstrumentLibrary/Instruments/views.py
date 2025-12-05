@@ -10,12 +10,8 @@ from django.views.generic import TemplateView, ListView, DetailView, CreateView,
 from .forms import UploadFileForm, ContactForm
 from .mixins import DataMixin
 from .models import Instrument, UploadedFiles
+from django.core.cache import cache
 
-menu = [{'title': "О сайте", 'url_name': 'about'},
-        {'title': "Добавить статью", 'url_name': 'add_page'},
-        {'title': "Обратная связь", 'url_name': 'contact'},
-        {'title': "Войти", 'url_name': 'login'}
-]
 
 
 class Home(DataMixin, ListView):
@@ -25,8 +21,13 @@ class Home(DataMixin, ListView):
     title_page = "Главная страница"
     cat_selected = 0
 
+
     def get_queryset(self):
-        return Instrument.published_objects.all().select_related('cat')
+        instrument_list = cache.get('Instrument_instruments')
+        if not instrument_list:
+            instrument_list = Instrument.published_objects.all().select_related('cat')
+            cache.set('Instrument_instruments', instrument_list, 60)
+        return instrument_list
 
 @login_required
 def about(request):
@@ -56,7 +57,6 @@ class InstrumentView(DataMixin, DetailView):
 
 def page_not_found(request, exception):
     return HttpResponseNotFound("Страница не найдена")
-
 
 
 class AddPage(PermissionRequiredMixin, LoginRequiredMixin, DataMixin, CreateView):

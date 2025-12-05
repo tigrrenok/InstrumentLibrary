@@ -1,6 +1,8 @@
 from django.urls import path, register_converter
 from . import views, converters
 
+from django.views.decorators.cache import cache_page
+
 register_converter(converters.FourDigitYearConverter, "year4")
 
 
