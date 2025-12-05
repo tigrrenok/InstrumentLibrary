@@ -1,0 +1,1387 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-12-01T12:59:20.905Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "Титратор ручной 856",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-12-01T13:11:51.448Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "Хроматограф Shine",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-12-01T13:15:43.394Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "24",
+    "object_repr": "хроматограф Shine",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-12-03T06:56:41.419Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "905 Titrando",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\", \"\\u0421\\u043e\\u0434\\u0435\\u0440\\u0436\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-12-03T06:57:48.561Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "905 Titrando",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-12-03T06:59:12.710Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "905 Titrando",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-12-03T08:13:31.907Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "809 Titrando",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u044d\\u0433\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-12-04T13:20:28.789Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "modarator",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-12-04T13:20:53.316Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "8",
+    "object_repr": "tigra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add instrument",
+    "content_type": 7,
+    "codename": "add_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change instrument",
+    "content_type": 7,
+    "codename": "change_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete instrument",
+    "content_type": 7,
+    "codename": "delete_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view instrument",
+    "content_type": 7,
+    "codename": "view_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add instrument category",
+    "content_type": 8,
+    "codename": "add_instrumentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change instrument category",
+    "content_type": 8,
+    "codename": "change_instrumentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete instrument category",
+    "content_type": 8,
+    "codename": "delete_instrumentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view instrument category",
+    "content_type": 8,
+    "codename": "view_instrumentcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add tag instrument",
+    "content_type": 9,
+    "codename": "add_taginstrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change tag instrument",
+    "content_type": 9,
+    "codename": "change_taginstrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete tag instrument",
+    "content_type": 9,
+    "codename": "delete_taginstrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view tag instrument",
+    "content_type": 9,
+    "codename": "view_taginstrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add instrument specification",
+    "content_type": 10,
+    "codename": "add_instrumentspecification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change instrument specification",
+    "content_type": 10,
+    "codename": "change_instrumentspecification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete instrument specification",
+    "content_type": 10,
+    "codename": "delete_instrumentspecification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view instrument specification",
+    "content_type": 10,
+    "codename": "view_instrumentspecification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add uploaded files",
+    "content_type": 11,
+    "codename": "add_uploadedfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change uploaded files",
+    "content_type": 11,
+    "codename": "change_uploadedfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete uploaded files",
+    "content_type": 11,
+    "codename": "delete_uploadedfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view uploaded files",
+    "content_type": 11,
+    "codename": "view_uploadedfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add association",
+    "content_type": 12,
+    "codename": "add_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change association",
+    "content_type": 12,
+    "codename": "change_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete association",
+    "content_type": 12,
+    "codename": "delete_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view association",
+    "content_type": 12,
+    "codename": "view_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add code",
+    "content_type": 13,
+    "codename": "add_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change code",
+    "content_type": 13,
+    "codename": "change_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete code",
+    "content_type": 13,
+    "codename": "delete_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view code",
+    "content_type": 13,
+    "codename": "view_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add nonce",
+    "content_type": 14,
+    "codename": "add_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change nonce",
+    "content_type": 14,
+    "codename": "change_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete nonce",
+    "content_type": 14,
+    "codename": "delete_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view nonce",
+    "content_type": 14,
+    "codename": "view_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add user social auth",
+    "content_type": 15,
+    "codename": "add_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change user social auth",
+    "content_type": 15,
+    "codename": "change_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete user social auth",
+    "content_type": 15,
+    "codename": "delete_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view user social auth",
+    "content_type": 15,
+    "codename": "view_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add partial",
+    "content_type": 16,
+    "codename": "add_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change partial",
+    "content_type": 16,
+    "codename": "change_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete partial",
+    "content_type": 16,
+    "codename": "delete_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view partial",
+    "content_type": 16,
+    "codename": "view_partial"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "modarator",
+    "permissions": [
+      25,
+      26,
+      27,
+      28
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$BIxzlADhNyqOqY0oOJCpjI$xQ6wlK5RVUho6lLQastW/qTHJkQi3CXHT5h6M4nmJcA=",
+    "last_login": "2025-12-04T13:18:48.001Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "Рут",
+    "last_name": "Рут",
+    "email": "root@example.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-12-01T11:48:22.100Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$VYFWYCGCv30LlYgO6402S9$nN7umbwBnw+3pHJKhdHFZKBMZmycze0XENu2NazdRlM=",
+    "last_login": "2025-12-04T11:52:56.870Z",
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T13:17:29.855Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$BHhcbf8hhWhUK1wr4nVDfo$jg3p5O3HQnLpYR2l5Ld7Q69ByMUNTUhsJTNocGBPCrk=",
+    "last_login": "2025-12-03T13:19:57.631Z",
+    "is_superuser": false,
+    "username": "user2",
+    "first_name": "user2",
+    "last_name": "user2",
+    "email": "user2@example.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T13:19:48.299Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$uTa64USNa2Uutx2857xQOV$tCIoErVuHa1XsPHGeeiqmizF5KdcB0NDr4P+hKRJgxw=",
+    "last_login": "2025-12-03T13:21:15.494Z",
+    "is_superuser": false,
+    "username": "user3",
+    "first_name": "user3",
+    "last_name": "user3",
+    "email": "user3@example.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T13:21:04.892Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ig3LhDRFkvVcqN91MLYvgX$OFAprEcYLisFCGXh13v8CJpUJoucVL7+AtyAonXvCEs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user4",
+    "first_name": "user4",
+    "last_name": "user4",
+    "email": "user4@example.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T13:28:41.283Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jAyJ2iSd0mtfXMjyPKArsz$AkJCfKLI+vrzqBH5N6CSJ9iFXeR0FFQTPhO918tFC2k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user5",
+    "first_name": "user5",
+    "last_name": "user5",
+    "email": "user5@example.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T13:30:03.024Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$6iiIUqOBsuE92muBa1jPY9$XNpW2cnghITv0CxqhATEuNKFhrGupjGqqkXG+XaNWFc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user6",
+    "first_name": "user6",
+    "last_name": "user6",
+    "email": "user6@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T13:33:21.108Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$lqYmAwpbTsAd6aop14qnlo$sd5GLOR0oGg3l/K5hGQjNoolKg/Ju2vpmxfNnK1GM70=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tigra",
+    "first_name": "tigra",
+    "last_name": "tigra",
+    "email": "neu5ac@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-04T12:22:17Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "Instruments",
+    "model": "instrument"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "Instruments",
+    "model": "instrumentcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "Instruments",
+    "model": "taginstrument"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "Instruments",
+    "model": "instrumentspecification"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "Instruments",
+    "model": "uploadedfiles"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "social_django",
+    "model": "association"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "social_django",
+    "model": "code"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "social_django",
+    "model": "nonce"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "social_django",
+    "model": "usersocialauth"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "social_django",
+    "model": "partial"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2gbczk27we5hfrdm3n7pivuzzll78mos",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmx119Kes5grXcdHECOFCcV4u4QKQW0b2beSyTc1pq2XpY0sTgLJU6_W0Z6lLYDvmO7zZLmti5TlrsiD9rldebyvBzu30HFXr81GsOmmBGojM5lTww-Bqt1dgxGBesRGMCCi2ogH6lEJGND9qydHVC8P-F6N4A:1vR9EO:fKgfZ-CKuxGx8xtPUsOIrp2OGffZTDzxbN33xP3Ea9A",
+    "expire_date": "2025-12-18T13:18:48.012Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ane50cn4wezhsvz50bxu1wpnd2tpvi5m",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmx119Kes5grXcdHECOFCcV4u4QKQW0b2beSyTc1pq2XpY0sTgLJU6_W0Z6lLYDvmO7zZLmti5TlrsiD9rldebyvBzu30HFXr81GsOmmBGojM5lTww-Bqt1dgxGBesRGMCCi2ogH6lEJGND9qydHVC8P-F6N4A:1vR95o:xeRbBfXL1bj6TCC7AepxBAXnCvJkYjwG9Y9EjxXUtpo",
+    "expire_date": "2025-12-18T13:09:56.185Z"
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 5,
+  "fields": {
+    "title": "G20 Compact Titrator",
+    "slug": "g20-compact-titrator",
+    "image": "",
+    "content": "Компактный титратор для рутинных измерений в лабораторных условиях. \n\nОснащен высокоточным дозатором объемом 20 мл с разрешением 0.001 мл. Поддерживает все основные методы титрования: кислотно-основное, редокс-титрование, осадительное титрование и комплексонометрию.\n\nСистема включает встроенный pH-электрод с автоматической температурной компенсацией. Интерфейс пользователя интуитивно понятен, обучение персонала занимает не более 30 минут.\n\nПрибор идеально подходит для контроля качества в пищевой, фармацевтической и химической промышленности. Поддерживает до 50 методов анализа с возможностью их быстрого вызова.\n\nПроизводитель: Mettler Toledo",
+    "time_created": "2025-11-28T09:38:00.159Z",
+    "time_updated": "2025-11-28T09:38:00.159Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 6,
+  "fields": {
+    "title": "T5 Excellence Titrator",
+    "slug": "t5-excellence-titrator",
+    "image": "",
+    "content": "Титратор экспертного класса для научно-исследовательских лабораторий и центров контроля качества.\n\nОснащен сенсорным цветным дисплеем 8.4 дюйма с разрешением 800x600 пикселей. Поддерживает более 200 различных методов титрования с возможностью создания пользовательских протоколов.\n\nВстроенная система диагностики Electrode Expert™ автоматически контролирует состояние электродов и рекомендует процедуры обслуживания. Поддержка технологии DGi для измерения pH без необходимости калибровки.\n\nИнструмент соответствует требованиям GLP/GMP, ведет полный журнал аудита с электронной подписью. Возможность подключения к LIMS системам через Ethernet или USB-интерфейс.\n\nПроизводитель: Mettler Toledo",
+    "time_created": "2025-11-28T09:38:00.180Z",
+    "time_updated": "2025-11-28T09:38:00.180Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 7,
+  "fields": {
+    "title": "T7 Automatic Titrator",
+    "slug": "t7-automatic-titrator",
+    "image": "",
+    "content": "Автоматический титратор для сложных анализов в промышленных лабораториях.\n\nСистема поддерживает до 4 дозаторов одновременно с возможностью независимого управления каждым. Максимальный объем дозирования - 50 мл с точностью ±0.1%.\n\nАвтоматическая система распознавания и смены электродов. Встроенный термостатируемый блок для образцов поддерживает температуру от +5°C до +100°C с точностью ±0.1°C.\n\nОснащен системой перемешивания с регулируемой скоростью от 50 до 1500 об/мин. Поддерживает работу с вязкими и гетерогенными средами.\n\nПроизводитель: Mettler Toledo",
+    "time_created": "2025-11-28T09:38:00.187Z",
+    "time_updated": "2025-12-01T09:23:38.500Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": 1,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 8,
+  "fields": {
+    "title": "T9 Titration System",
+    "slug": "t9-titration-system",
+    "image": "",
+    "content": "Модульная система титрования для лабораторий с высокими требованиями к производительности и гибкости.\n\nКонфигурация системы позволяет комбинировать до 8 различных модулей: дозаторы, сенсоры, пробоподготовчики, селекторы электродов. Поддерживает параллельное выполнение до 4 независимых титрований.\n\nИнтегрированная система управления образцами RS10 позволяет автоматически анализировать до 120 проб в непрерывном режиме. Встроенная система очистки и калибровки электродов.\n\nПрограммное обеспечение T9 Pilot обеспечивает полный контроль над всеми процессами, включая планирование экспериментов, мониторинг в реальном времени и генерацию отчетов.\n\nПроизводитель: Mettler Toledo",
+    "time_created": "2025-11-28T09:38:00.195Z",
+    "time_updated": "2025-11-28T09:38:00.195Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 9,
+  "fields": {
+    "title": "Rondo 60 Titrator",
+    "slug": "rondo-60-titrator",
+    "image": "",
+    "content": "Экономичный титратор для базовых измерений в учебных и производственных лабораториях.\n\nПредназначен для определения кислотности, щелочности, содержания хлоридов и других рутинных измерений. Объем дозатора - 10 мл с шагом 0.01 мл.\n\nПростой интерфейс с 6 программируемыми кнопками для быстрого доступа к часто используемым методам. Встроенная память на 20 методов анализа.\n\nАвтоматическое определение конечной точки титрования по производной. Поддержка ручного и автоматического режимов работы. Не требует специального обучения для эксплуатации.\n\nПроизводитель: Mettler Toledo",
+    "time_created": "2025-11-28T09:38:00.202Z",
+    "time_updated": "2025-11-28T09:38:00.202Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 10,
+  "fields": {
+    "title": "809 Titrando",
+    "slug": "809-titrando",
+    "image": "",
+    "content": "Профессиональный титратор для определения влаги по Карлу Фишеру в различных материалах.\n\nОбеспечивает точность измерений на уровне ±1 μg воды. Диапазон определяемого содержания воды: от 10 ppm до 100%. Поддерживает как объемное, так и кулонометрическое титрование.\n\nОснащен дозатором с максимальным объемом 50 мл и разрешением 1/50000. Система автоматической компенсации влияния температуры и влажности окружающей среды.\n\nВстроенная база данных растворителей с автоматическим расчетом поправочных коэффициентов. Поддерживает работу с гигроскопичными образцами в боксе с контролируемой атмосферой.\n\nПроизводитель: Metrohm",
+    "time_created": "2025-11-28T09:38:00.210Z",
+    "time_updated": "2025-12-03T08:13:31.905Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 11,
+  "fields": {
+    "title": "888 Titrando",
+    "slug": "888-titrando",
+    "image": "",
+    "content": "Универсальный титратор для всех видов титрования в исследовательских и промышленных лабораториях.\n\nПоддерживает до 8 различных методов титрования в одном приборе: pH-статистическое, потенциометрическое, фотометрическое, термометрическое. Возможность подключения до 4 дозаторов одновременно.\n\nИнтерфейс USB 3.0 для быстрой передачи данных и подключения периферийных устройств. Сенсорный экран 10.1 дюйма с разрешением 1280x800.\n\nСистема OMNIS позволяет управлять несколькими приборами одновременно через единый интерфейс. Поддержка удаленного доступа и облачного хранения данных.\n\nПроизводитель: Metrohm",
+    "time_created": "2025-11-28T09:38:00.217Z",
+    "time_updated": "2025-11-28T09:38:00.217Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 12,
+  "fields": {
+    "title": "905 Titrando",
+    "slug": "905-titrando",
+    "image": "images/905.png",
+    "content": "Профессиональный титратор с расширенными возможностями для аналитических лабораторий.\r\n\r\nПоддерживает подключение до 8 дозирующих станций с независимым управлением. Максимальная производительность - до 120 определений в час при работе с автоподатчиком образцов.\r\n\r\nВстроенная система термостатирования образцов в диапазоне от -10°C до +150°C. Поддержка работы в инертной атмосфере для анализа кислород-чувствительных проб.\r\n\r\nОснащен системой распознавания RFID-меток на электродах и реактивах. Автоматическая верификация методов и калибровочных кривых.\r\n\r\nПроизводитель: Metrohm",
+    "time_created": "2025-11-28T09:38:00.225Z",
+    "time_updated": "2025-12-03T06:59:12.699Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 13,
+  "fields": {
+    "title": "OMNIS Titrator",
+    "slug": "omnis-titrator",
+    "image": "",
+    "content": "Инновационная система титрования нового поколения с облачной интеграцией.\n\nПлатформа OMNIS объединяет аппаратное и программное обеспечение в единую экосистему. Поддержка технологии IoT для предиктивного обслуживания и удаленного мониторинга.\n\nИнтуитивный интерфейс с голосовым управлением и распознаванием жестов. Встроенная система искусственного интеллекта для оптимизации методов анализа.\n\nОблачная интеграция позволяет хранить неограниченное количество методов и данных, синхронизировать настройки между приборами, генерировать отчеты в реальном времени.\n\nСоответствует требованиям FDA 21 CFR Part 11 с полной системой электронных подписей и аудиторского следа.\n\nПроизводитель: Metrohm",
+    "time_created": "2025-11-28T09:38:00.233Z",
+    "time_updated": "2025-11-28T09:38:00.233Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 14,
+  "fields": {
+    "title": "859 Thermopipet",
+    "slug": "859-thermopipet",
+    "image": "",
+    "content": "Термотитратор для температурно-зависимых анализов и исследований кинетики реакций.\n\nТочный контроль температуры в диапазоне от -20°C до +200°C с точностью ±0.01°C. Скорость нагрева до 10°C/мин, охлаждения - 5°C/мин.\n\nСистема позволяет проводить титрования при постоянной температуре, с линейным градиентом температуры или по сложным температурным программам.\n\nОснащен высокоточным термодатчиком Pt1000 с временем отклика менее 5 секунд. Автоматическая система компенсации тепловых потерь.\n\nИдеально подходит для изучения термодинамических параметров, определения точек Крафта, исследования полиморфных превращений.\n\nПроизводитель: Metrohm",
+    "time_created": "2025-11-28T09:38:00.240Z",
+    "time_updated": "2025-11-28T09:38:00.240Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 15,
+  "fields": {
+    "title": "ICS-6000 HPIC System",
+    "slug": "ics-6000-hpic-system",
+    "image": "",
+    "content": "Высокоэффективная ионная хроматографическая система для анализа неорганических и органических ионов.\n\nСистема ICS-6000 представляет собой модульную платформу для рутинного анализа и научных исследований. Оснащена бинарным насосом высокого давления с максимальным рабочим давлением 5000 psi и расходом от 0.001 до 5.0 мл/мин.\n\nДетекторная система включает проводимость с электрохимическим подавлением, амперометрический и UV-Vis детекторы. Автоматическая регенерация ловушек и защитных колонок продлевает срок службы аналитической колонки.\n\nТермостат колонок поддерживает температуру от 5°C до 80°C с точностью ±0.1°C. Встроенный автоподатчик образцов AS-AP позволяет анализировать до 288 проб без вмешательства оператора.\n\nИдеально подходит для анализа анионов, катионов, органических кислот, аминов в environmental, food, pharmaceutical и chemical образцах.\n\nКатегория: Ионная хроматография",
+    "time_created": "2025-11-28T09:40:51.910Z",
+    "time_updated": "2025-11-28T09:40:51.910Z",
+    "is_published": 1,
+    "cat": 2,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 16,
+  "fields": {
+    "title": "UltiMate 3000 UHPLC+",
+    "slug": "ultimate-3000-uhplc",
+    "image": "",
+    "content": "Ультра-высокоэффективная жидкостная хроматографическая система нового поколения.\n\nСистема UltiMate 3000 UHPLC+ поддерживает рабочее давление до 1200 bar (17500 psi) и обеспечивает беспрецедентное разрешение и скорость анализа. Бинарный насос с параллельным потоком обеспечивает минимальный градиентный лаг.\n\nДетекторная платформа включает DAD-3000 с высокоскоростным сканированием (100 Гц), флуоресцентный детектор с временным разрешением и масс-спектрометрический интерфейс. Автоматическая система диагностики SmartFlow контролирует состояние системы в реальном времени.\n\nТермостат колонок с 6-позиционным клапаном позволяет проводить многомерный хроматографический анализ. Система совместима с колонками диаметром от 1.0 до 4.6 мм.\n\nПрограммное обеспечение Chromeleon 7.2 обеспечивает полный контроль над системой, обработку данных и соответствие требованиям 21 CFR Part 11.\n\nКатегория: Жидкостная хроматография",
+    "time_created": "2025-11-28T09:40:51.923Z",
+    "time_updated": "2025-11-28T09:40:51.923Z",
+    "is_published": 1,
+    "cat": 3,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 17,
+  "fields": {
+    "title": "Dionex ASE 350",
+    "slug": "dionex-ase-350",
+    "image": "",
+    "content": "Автоматизированная система экстракции при повышенном давлении и температуре.\n\nСистема ASE 350 использует технологию ускоренной экстракции растворителем для быстрого и эффективного извлечения аналитов из твердых и полутвердых образцов. Рабочее давление до 1500 psi и температура до 200°C.\n\nОбъем экстракционных ячеек от 1 мл до 100 мл. Автоматическая система позволяет проводить до 24 экстракций последовательно без вмешательства оператора. Встроенная система очистки ячеек и сбора экстрактов.\n\nЗначительно сокращает время экстракции по сравнению с традиционными методами (Сокслет, мацерация) - с 4-48 часов до 15-20 минут. Расход растворителя снижен на 50-90%.\n\nПрименяется для экстракции пестицидов, ПАУ, PCB, фармацевтических препаратов, добавок из почв, sediments, пищевых продуктов, полимеров.\n\nКатегория: Пробоподготовка",
+    "time_created": "2025-11-28T09:40:51.940Z",
+    "time_updated": "2025-11-28T09:40:51.940Z",
+    "is_published": 1,
+    "cat": 4,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 18,
+  "fields": {
+    "title": "Dionex Inuvion IC System",
+    "slug": "dionex-inuvion-ic-system",
+    "image": "",
+    "content": "Компактная ионно-хроматографическая система для рутинного анализа.\n\nСистема Inuvion объединяет в одном корпусе насос, детектор проводимости, дегазатор, инжектор и термостат колонок. Занимает минимальную площадь на лабораторном столе.\n\nРабочее давление до 3000 psi, расход 0.1-3.0 мл/мин. Детектор проводимости с химическим подавлением обеспечивает превосходную чувствительность и стабильность базовой линии.\n\nПредварительно настроенные методы для анализа основных анионов (F-, Cl-, NO2-, Br-, NO3-, PO4 3-, SO4 2-) и катионов (Li+, Na+, NH4+, K+, Mg2+, Ca2+). Обучение оператора занимает менее 1 дня.\n\nИдеальна для environmental monitoring, контроля качества воды, анализа пищевых продуктов и напитков.\n\nКатегория: Ионная хроматография",
+    "time_created": "2025-11-28T09:40:51.948Z",
+    "time_updated": "2025-11-28T09:40:51.948Z",
+    "is_published": 1,
+    "cat": 2,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 19,
+  "fields": {
+    "title": "Dionex AutoTrace 280",
+    "slug": "dionex-autotrace-280",
+    "image": "",
+    "content": "Автоматическая система твердофазной экстракции (SPE) для очистки и концентрирования проб.\n\nСистема AutoTrace 280 позволяет автоматизировать все этапы SPE: кондиционирование картриджа, нанесение пробы, промывку, элюирование. Одновременно может обрабатывать до 6 проб.\n\nПоддерживает картриджи объемом 1, 3, 6 мл и дисковые картриджи 47 мм. Объем пробы от 10 мл до 20 литров. Встроенный UV детектор для мониторинга процесса экстракции.\n\nПрограммируемые скорости потока от 1 до 100 мл/мин. Система инертных материалов для работы с агрессивными растворителями. Автоматическая промывка системы между пробами.\n\nПрименяется для концентрирования пестицидов, гербицидов, фармацевтических препаратов, endocrine disruptors из водных матриц.\n\nКатегория: Пробоподготовка",
+    "time_created": "2025-11-28T09:40:51.955Z",
+    "time_updated": "2025-11-28T09:40:51.955Z",
+    "is_published": 1,
+    "cat": 4,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 20,
+  "fields": {
+    "title": "ICS-5000+ HPIC System",
+    "slug": "ics-5000-hpic-system",
+    "image": "",
+    "content": "Модульная система ионной хроматографии для высокопроизводительных лабораторий.\n\nСистема ICS-5000+ поддерживает капиллярную (0.4 мм), микро- (2 мм) и стандартную (4 мм) хроматографию. Рабочее давление до 5000 psi с расходом от 0.001 до 10.0 мл/мин.\n\nМодульная архитектура позволяет конфигурировать систему с несколькими детекторами: проводимости, амперометрическим, UV-Vis, масс-спектрометрическим. Поддержка 2D-хроматографии с двумя независимыми потоками.\n\nТермостат колонок с 10-позиционным клапаном для сложных методов анализа. Встроенная система очистки элюентов и онлайн-концентрации проб.\n\nОбеспечивает превосходное разделение сложных смесей ионов, включая галогениды, оксигалогениды, неорганические anions и cations, органические кислоты.\n\nКатегория: Ионная хроматография",
+    "time_created": "2025-11-28T09:40:51.963Z",
+    "time_updated": "2025-11-28T09:40:51.963Z",
+    "is_published": 1,
+    "cat": 2,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 21,
+  "fields": {
+    "title": "Dionex ICS-900",
+    "slug": "dionex-ics-900",
+    "image": "",
+    "content": "Бюджетная система ионной хроматографии для образовательных учреждений и рутинных лабораторий.\n\nКомпактный моноблок включает изократический насос, детектор проводимости, инжектор и термостат колонок. Простота эксплуатации и минимальные требования к обслуживанию.\n\nРабочее давление до 1500 psi, фиксированный расход 1.0 мл/мин. Детектор проводимости с химическим подавлением для стабильной работы.\n\nПредустановленные методы для анализа основных анионов в питьевой воде, wastewater, пищевых продуктах. Обучение оператора занимает несколько часов.\n\nИдеальна для учебных лабораторий, контроля технологических процессов, скринингового анализа.\n\nКатегория: Ионная хроматография",
+    "time_created": "2025-11-28T09:40:51.970Z",
+    "time_updated": "2025-11-28T09:40:51.970Z",
+    "is_published": 1,
+    "cat": 2,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 22,
+  "fields": {
+    "title": "Титратор ручной 856",
+    "slug": "manual_titrator_856",
+    "image": "",
+    "content": "Титратор ручной 856",
+    "time_created": "2025-12-01T12:59:20.902Z",
+    "time_updated": "2025-12-01T12:59:20.902Z",
+    "is_published": 1,
+    "cat": 1,
+    "specifications": null,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "Instruments.instrument",
+  "pk": 24,
+  "fields": {
+    "title": "хроматограф Shine",
+    "slug": "khromatograf-shine",
+    "image": "",
+    "content": "хроматограф Shine",
+    "time_created": "2025-12-01T13:15:43.381Z",
+    "time_updated": "2025-12-01T13:15:43.381Z",
+    "is_published": 1,
+    "cat": 2,
+    "specifications": null,
+    "tags": []
+  }
+},
+{
+  "model": "Instruments.instrumentcategory",
+  "pk": 1,
+  "fields": {
+    "name": "Титраторы",
+    "slug": "titrators"
+  }
+},
+{
+  "model": "Instruments.instrumentcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Ионные хроматографы",
+    "slug": "ionic-chromatographs"
+  }
+},
+{
+  "model": "Instruments.instrumentcategory",
+  "pk": 3,
+  "fields": {
+    "name": "Жидкостные хроматографы",
+    "slug": "hplc-chromatographs"
+  }
+},
+{
+  "model": "Instruments.instrumentcategory",
+  "pk": 4,
+  "fields": {
+    "name": "Пробоподготовка",
+    "slug": "sample-preparation"
+  }
+},
+{
+  "model": "Instruments.taginstrument",
+  "pk": 1,
+  "fields": {
+    "name": "потенциометрическое титрование",
+    "slug": "potentiometric-titration"
+  }
+},
+{
+  "model": "Instruments.taginstrument",
+  "pk": 2,
+  "fields": {
+    "name": "волюмометрическое титрование",
+    "slug": "volumetric-titration"
+  }
+},
+{
+  "model": "Instruments.taginstrument",
+  "pk": 3,
+  "fields": {
+    "name": "кулонометрическое титрование",
+    "slug": "coulometric-titration"
+  }
+},
+{
+  "model": "Instruments.instrumentspecification",
+  "pk": 1,
+  "fields": {
+    "accuracy": "3%",
+    "resolution": "0.01",
+    "method": "Потециометрическое титрование"
+  }
+},
+{
+  "model": "Instruments.uploadedfiles",
+  "pk": 1,
+  "fields": {
+    "file": "uploads_instrument/logo4_small.png"
+  }
+},
+{
+  "model": "Instruments.uploadedfiles",
+  "pk": 2,
+  "fields": {
+    "file": "uploads_instrument/aquion.jpg"
+  }
+}
+]

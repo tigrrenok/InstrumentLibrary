@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     'users.apps.UsersConfig',
     'common.apps.CommonConfig',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -84,9 +85,17 @@ WSGI_APPLICATION = 'InstrumentLibrary.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "InstrumentDB",
+        "USER": "postgres",
+        "PASSWORD": "1",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -146,6 +155,7 @@ LOGOUT_REDIRECT_URL = 'home'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'users.authentication.EmailAuthenticationBackend',
+    'social_core.backends.github.GithubOAuth2'
 ]
 
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
