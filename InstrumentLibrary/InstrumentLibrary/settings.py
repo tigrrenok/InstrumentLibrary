@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'common.apps.CommonConfig',
     'social_django',
     'captcha',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -184,3 +186,5 @@ CACHES = {
         "LOCATION": "redis://127.0.0.1:6379",
     }
 }
+
+SITE_ID = 1
