@@ -5,9 +5,9 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect, render, get_object_or_404
 
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, FormView
 
-from .forms import UploadFileForm
+from .forms import UploadFileForm, ContactForm
 from .mixins import DataMixin
 from .models import Instrument, UploadedFiles
 
@@ -76,12 +76,20 @@ class UpdatePage(PermissionRequiredMixin, LoginRequiredMixin, DataMixin, UpdateV
     permission_required = 'Instrument.change_instrument'
 
 
-def contact(request):
-    return HttpResponse("Контакты")
+class Contact(DataMixin, FormView):
+    form_class = ContactForm
+    template_name = 'Instruments/contact.html'
+    success_url = reverse_lazy('home')
+    title_page = "Обратная связь"
 
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
 
-def login(request):
-    return HttpResponse("Войти")
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
 
 
 class CategoryView(DataMixin, ListView):
